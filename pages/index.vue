@@ -17,6 +17,33 @@
         h2.subtitle My name is Oluwatosin Edwards, and I am a Software Engineer.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         button#contact Contact Me
     .middle
+      .colored__container
+        h3 Hi, My name is Oluwatosin Edwards
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        b-card#skills-card(title="Skills"
+          tag="article"
+          style="text-align:center;"
+          class="mb-2")
+          .card-left
+            .card__icon
+              i(class="fas fa-igloo" style="color:#6A2B7F")
+            .card__description
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .card__list
+              ul
+                li HTML
+                li CSS
+          //- .card-right
+          //-   .card__icon
+          //-     i(class="fas fa-igloo" style="color:#6A2B7F")
+          //-   .card__description
+          //-     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          //-   .card__list
+          //-     ul
+          //-       li HTML
+          //-       li CSS
+    
+
     
 </template>
 
@@ -37,6 +64,8 @@ export default {
 
 <style <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import "assets/variables";
 
 .top{ 
   display: flex;
@@ -61,7 +90,7 @@ export default {
       height: 30vh;
       display: flex;
       align-items: center;
-       #man {
+      #man {
           width: 10vw;
           top: -10vh;
           position: relative;
@@ -94,7 +123,7 @@ export default {
       font-weight: 300;
       font-size: 30px;
       color: #526488;
-      padding-bottom: 15px;
+      padding-bottom: 3rem;
     }
     #contact {
       background: url(./assets/button.svg) no-repeat;
@@ -105,6 +134,55 @@ export default {
       font-size: 22px;
       color: #FFFFFF;
       text-align: center;
+      outline: none;
+    }
+  }
+}
+
+.middle{
+  .colored__container{
+    background-image: linear-gradient(to bottom right,$purp, $pink);
+    width: 100vw;
+    height: 35rem;
+    margin: 10rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    align-items: center;
+    h3 {
+      padding: 2rem 0 2rem 0;
+      font-family: Roboto-Bold;
+      font-size: 2rem;
+    }
+    p {
+      text-align: center;
+    }
+    #skills-card {
+      display: flex;
+      flex-direction: row;
+      background-color: #fff;;
+      color: $purp;
+      width:80vw;
+      height: fit-content;
+      box-shadow: 0 0 6px 0 rgba(70,73,77,0.30);
+      .card-left{
+        // border-right-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        .card__list {
+          ul {
+            list-style-type: none;
+          }
+        }
+      }
+      .card-right {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+      }
     }
   }
 }
