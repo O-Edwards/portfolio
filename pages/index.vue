@@ -1,12 +1,5 @@
 <template lang="pug">
   div
-    //- b-navbar(toggleable="md" type="dark" variant="info" sticky=true id="nav")
-    //-   b-navbar-toggle(target="nav_collapse")
-    //-   b-navbar-brand(href="#") Oluwatosin Edwards
-    //-   b-collapse(is-nav id="nav_collapse")
-    //-     b-navbar-nav
-    //-       b-nav-item(href="#") Home
-    //-       b-nav-item(href="#") Menu
     .top
       .landing__image
       .header__text
@@ -26,13 +19,15 @@
           class="mb-2")
           .card-left
             .card__icon
-              i(class="fas fa-igloo" style="color:#6A2B7F")
+              i(class="fas fa-laptop" style="color:#6A2B7F")
             .card__description
               p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             .card__list
               ul
                 li HTML
                 li CSS
+                li JavaScript
+                li Vue JS
           //- .card-right
           //-   .card__icon
           //-     i(class="fas fa-igloo" style="color:#6A2B7F")
