@@ -38,8 +38,12 @@
           //-       li HTML
           //-       li CSS
     
-
+    .middle-2
+      h3 Projects
+      p Here you can view some of my recent projects
+    .bottom
     
+
 </template>
 
 <script>
@@ -169,6 +173,7 @@ export default {
         .card__list {
           ul {
             list-style-type: none;
+            padding: 0;
           }
         }
       }
@@ -180,5 +185,10 @@ export default {
       }
     }
   }
+}
+
+.bottom {
+   background-image: linear-gradient(to bottom right,$purp, $pink);
+   height: 10rem;
 }
 </style>
