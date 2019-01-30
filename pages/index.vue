@@ -6,52 +6,76 @@
           h5#name I'm Oluwatosin Edwards
           h3#title I am a <br />Software Engineer
           a(href="#middle") <a>-</a> About Me
-    .middle#middle
-      .colored__container
-        h3 Hi, My name is Oluwatosin Edwards
+    section(class="about" id="middle")
+      .blerb
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    .middle-2
-      b-card#skills-card(title="Skills"
-        tag="article"
-        style="text-align:center;"
-        class="mb-2")
-        .card-left
-          .card__icon
-            i(class="fas fa-laptop" style="color:#6A2B7F")
-          .card__description
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          .card__list
-            ul
-              li HTML
-              li CSS
-              li JavaScript
-              li Vue JS
-      h3 Projects
-      p Here you can view some of my recent projects
-      .project-list
-        b-card(overlay
-            img-src="https://www.idealtoy.co.za/assets/app/public/images/magento/coming_soon.jpg"
-            img-alt="Card Image"
-            text-variant="white"
-            )
-        b-card(overlay
-            img-src="https://www.idealtoy.co.za/assets/app/public/images/magento/coming_soon.jpg"
-            img-alt="Card Image"
-            text-variant="white"
-            )
-        b-card(overlay
-            img-src="https://www.idealtoy.co.za/assets/app/public/images/magento/coming_soon.jpg"
-            img-alt="Card Image"
-            text-variant="white"
-            )
-    .bottom
-      b-card#contact-card(
-        tag="article"
-        style="text-align:center;"
-        class="mb-2")
-          h4 Contact methods
-          p Hey hit me up
-          b-button Contact
+      .about-me 
+        .skills-card
+          .card-left
+            .card__icon
+              i(class="fas fa-laptop" style="color:$purp")
+            .card__description
+              p.sub Software Developer
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua.
+            .card__list
+              p.lang Languages
+              p.list HTML, CSS, JavaScript, Vue JS, React JS, Python
+              p.devTools Dev Tools:
+              ul
+                li Git
+                li Mocha JS
+                li Cypress JS
+                li Nightwatch JS
+
+         
+
+        
+    //- .middle#middle
+    //-   .colored__container
+    //-     h3 Hi, My name is Oluwatosin Edwards
+    //-     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    //- .middle-2
+    //-   b-card#skills-card(title="Skills"
+    //-     tag="article"
+    //-     style="text-align:center;"
+    //-     class="mb-2")
+    //-     .card-left
+    //-       .card__icon
+    //-         i(class="fas fa-laptop" style="color:#6A2B7F")
+    //-       .card__description
+    //-         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dox <br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    //-       .card__list
+    //-         ul
+    //-           li HTML
+    //-           li CSS
+    //-           li JavaScript
+    //-           li Vue JS
+    //-   h3 Projects
+    //-   p Here you can view some of my recent projects
+    //-   .project-list
+    //-     b-card(overlay
+    //-         img-src="https://www.idealtoy.co.za/assets/app/public/images/magento/coming_soon.jpg"
+    //-         img-alt="Card Image"
+    //-         text-variant="white"
+    //-         )
+    //-     b-card(overlay
+    //-         img-src="https://www.idealtoy.co.za/assets/app/public/images/magento/coming_soon.jpg"
+    //-         img-alt="Card Image"
+    //-         text-variant="white"
+    //-         )
+    //-     b-card(overlay
+    //-         img-src="https://www.idealtoy.co.za/assets/app/public/images/magento/coming_soon.jpg"
+    //-         img-alt="Card Image"
+    //-         text-variant="white"
+    //-         )
+    //- .bottom
+    //-   b-card#contact-card(
+    //-     tag="article"
+    //-     style="text-align:center;"
+    //-     class="mb-2")
+    //-       h4 Contact methods
+    //-       p Hey hit me up
+    //-       b-button Contact
     
 
 </template>
@@ -117,27 +141,93 @@ export default {
     }
   }
 
-
-.middle{
-  .colored__container{
-    background-image: linear-gradient(to bottom right,$purp, $pink);
-    width: 100vw;
-    height: 20rem;
-    margin: 0 0 0 0;
-    display: flex;
-    flex-direction: column;
-    color: #FFFFFF;
-    align-items: center;
-    h3 {
-      padding: 2rem 0 2rem 0;
-      font-family: Roboto-Bold;
-      font-size: 2rem;
-    }
-    p {
-      text-align: center;
-    }
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./assets/purple-lava.svg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  .blerb {
+    color: white;
+    text-align: center;
+    padding-bottom: 4rem;
+    font-size: 1.5rem;
   }
+  .skills-card {
+      align-items: center;
+    justify-content: center;
+      text-align: center;
+      display: flex;
+      background-color: #fff;
+      color: $purp;
+      width:60vw;
+      height: fit-content;
+      box-shadow: 0 0 6px 0 rgba(70,73,77,0.30);
+      border-radius: 1rem;
+      padding: 5px;
+      // margin: -6rem 0 4rem 0 !important;
+      h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+      .card-left{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        .card__description {
+          color: black;
+          .sub {
+            font-weight: 700;
+            color: black;
+            margin: 0;
+          }
+        }
+        .card__list {
+          .devTools {
+            margin: 0;
+          }
+          ul {
+            color: black;
+            list-style-type: none;
+            padding: 0;
+          }
+          .lang {
+            color: $purp;
+            margin: 0;
+          }
+          .list {
+            color: black;
+          }
+        }
+      }
+    }
+  
 }
+// .middle{
+//   .colored__container{
+//     background-image: linear-gradient(to bottom right,$purp, $pink);
+//     width: 100vw;
+//     height: 20rem;
+//     margin: 0 0 0 0;
+//     display: flex;
+//     flex-direction: column;
+//     color: #FFFFFF;
+//     align-items: center;
+//     h3 {
+//       padding: 2rem 0 2rem 0;
+//       font-family: Roboto-Bold;
+//       font-size: 2rem;
+//     }
+//     p {
+//       text-align: center;
+//     }
+//   }
+// }
 
 .middle-2 {
   display: flex;
